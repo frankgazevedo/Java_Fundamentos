@@ -2,9 +2,10 @@
 bin
 
 # eclipse project file
-.settings/*
+*.settings/*
 .classpath
 .project
+.metadata/*
 
 # STS (Spring Tool Suite)
 .springBeans
