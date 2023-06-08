@@ -1,0 +1,27 @@
+# bin folder
+bin
+
+# eclipse project file
+.settings/*
+.classpath
+.project
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Maven 
+target/
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
