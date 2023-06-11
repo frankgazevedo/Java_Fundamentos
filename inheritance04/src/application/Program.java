@@ -5,13 +5,28 @@
  * 
  * Para garantir que contas comuns não possam ser
  * instanciadas, basta acrescentarmos a palavra "abstract" na
- * declaração da classe.
+ * declaração da classe:
  * 
  * 	public abstract class Account {
  * 	(...)
  * 
  * Notação UML: itálico
  * 
+ * Classes Abstratas: São classes que não podem ser instanciadas.
+ * É uma forma de garantir HERANÇA TOTAL: somente SUBclasses não
+ * abstratas podem ser instanciadas, mas nunca a SUPERclasse abstrata
+ * 
+ * QUESTIONAMENTO: Se a classe Account não pode ser instanciada, por
+ * que simplesmente não criar somente SavingsAccount
+ * e BusinessAccount?
+ * 
+ * RESPOSTA:
+ * 01) Reuso
+ * 02) Polimorfismo: a SUPERclasse classe genérica nos permite tratar
+ * de forma fácil e uniforme todos os tipos de conta, inclusive
+ * com polimorfismo se for o caso. 
+ * Por exemplo, você pode colocar todos tipos de contas em uma 
+ * mesma coleção (COLLECTION).
  */
 package application;
 

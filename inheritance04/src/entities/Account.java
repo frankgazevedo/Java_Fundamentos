@@ -1,3 +1,8 @@
+/*
+ * Classes Abstratas: São classes que não podem ser instanciadas.
+ * É uma forma de garantir HERANÇA TOTAL: somente SUBclasses não
+ * abstratas podem ser instanciadas, mas nunca a SUPERclasse abstrata.
+ */
 package entities;
 
 public abstract class Account {
