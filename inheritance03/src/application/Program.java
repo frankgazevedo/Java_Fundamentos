@@ -9,7 +9,7 @@
  * produtos usados possuem data de fabricação.
  * Estes dados específicos devem ser
  * acrescentados na etiqueta de preço conforme
- * exemplo (próxima página). Para produtos
+ * exemplo. Para produtos
  * importados, a taxa e alfândega deve ser
  * acrescentada ao preço final do produto.
  * 
@@ -58,6 +58,10 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		/* Boa prática: utilizar o tipo mais genérico possível na Lista (SUPERclasse).
+		 * Isso garante reuso e manutenibilidade do código em caso de alteração
+		 * das SUBclasses.
+		 */
 		List<Product> list = new ArrayList<>();
 
 		System.out.print("Entre com o numero de produtos: ");
@@ -73,15 +77,15 @@ public class Program {
 			System.out.print("Preco: ");
 			double price = sc.nextDouble();
 			if (type == 'c') {
-				list.add(new Product(name, price));
+				list.add(new Product(name, price)); // instanciação de objeto da SUPERclasse
 			} else if (type == 'u') {
 				System.out.print("Data de fabricacao (DD/MM/YYYY): ");
 				LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-				list.add(new UsedProduct(name, price, date));
+				list.add(new UsedProduct(name, price, date)); // instanciação de objeto da SUBclasse
 			} else {
 				System.out.print("Taxa de importacao: ");
 				double customsFee = sc.nextDouble();
-				list.add(new ImportedProduct(name, price, customsFee));
+				list.add(new ImportedProduct(name, price, customsFee)); // instanciação de objeto da SUBclasse
 			}
 		}
 
