@@ -42,12 +42,20 @@ public class Program {
 	public static void main(String[] args) {
 
 		Locale.setDefault(Locale.US);
+		
+		/* Boa prática: utilizar o tipo mais genérico possível na Lista (SUPERclasse).
+		 * Isso garante reuso e manutenibilidade do código em caso de alteração
+		 * das SUBclasses.
+		 * 
+		 * É possível instanciar uma Collection (List) de tipo ABSTRACT (SUPERclasse),
+		 * desde que sejam instanciados objetos concretos (SUBclasses) posteriomente (UPCASTING).
+		 */
 		List<Account> list = new ArrayList<>();
 
-		list.add(new SavingsAccount(1001, "Alex", 500.00, 0.01));
-		list.add(new BusinessAccount(1002, "Maria", 1000.0, 400.0));
-		list.add(new SavingsAccount(1004, "Bob", 300.0, 0.01));
-		list.add(new BusinessAccount(1005, "Anna", 500.0, 500.0));
+		list.add(new SavingsAccount(1001, "Alex", 500.00, 0.01)); // instanciação de objeto concreto (SUBclasse)
+		list.add(new BusinessAccount(1002, "Maria", 1000.0, 400.0)); // instanciação de objeto concreto (SUBclasse)
+		list.add(new SavingsAccount(1004, "Bob", 300.0, 0.01)); // instanciação de objeto concreto (SUBclasse)
+		list.add(new BusinessAccount(1005, "Anna", 500.0, 500.0)); // instanciação de objeto concreto (SUBclasse)
 
 		double sum = 0.0;
 		for (Account acc : list) {
