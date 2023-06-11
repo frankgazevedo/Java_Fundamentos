@@ -55,6 +55,13 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		/* Boa prática: utilizar o tipo mais genérico possível na Lista (SUPERclasse).
+		 * Isso garante reuso e manutenibilidade do código em caso de alteração
+		 * das SUBclasses.
+		 * 
+		 * É possível instanciar uma Collection (List) de tipo ABSTRACT (SUPERclasse),
+		 * desde que sejam instanciados objetos concretos (SUBclasses) posteriomente (UPCASTING).
+		 */
 		List<Shape> list = new ArrayList<>();
 
 		System.out.print("Enter the number of shapes: ");
@@ -71,11 +78,11 @@ public class Program {
 				double width = sc.nextDouble();
 				System.out.print("Height: ");
 				double height = sc.nextDouble();
-				list.add(new Rectangle(color, width, height));
+				list.add(new Rectangle(color, width, height)); // instanciação de objeto concreto (SUBclasse)
 			} else {
 				System.out.print("Radius: ");
 				double radius = sc.nextDouble();
-				list.add(new Circle(color, radius));
+				list.add(new Circle(color, radius)); // instanciação de objeto concreto (SUBclasse)
 			}
 		}
 
