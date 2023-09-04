@@ -38,12 +38,12 @@
  * Withdraw error: Not enough balance
  *  
  */
-package exception02.application;
+package application;
 
 import java.util.Scanner;
 
-import exception02.model.exceptions.DomainException;
-import exception02.model.entities.Account;
+import model.entities.Account;
+import model.exceptions.DomainException;
 
 public class Program {
 
