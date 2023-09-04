@@ -1,4 +1,4 @@
-package exception01.model.exceptions;
+package model.exceptions;
 
 /*
  * RuntimeException: NÃO obriga o tratamento da exceção - não é necessário utilizar blocos try-catch.

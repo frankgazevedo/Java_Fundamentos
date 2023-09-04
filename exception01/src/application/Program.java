@@ -43,15 +43,15 @@
  * 
 */
 
-package exceptcion01.application;
+package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import exception01.model.entities.Reservation;
-import exception01.model.exceptions.DomainException;
+import model.entities.Reservation;
+import model.exceptions.DomainException;
 
 public class Program {
 
