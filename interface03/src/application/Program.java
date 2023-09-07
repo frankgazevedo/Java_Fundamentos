@@ -23,7 +23,7 @@ public class Program {
 		 * turn, provide behaviors (methods) and/or common reusable attributes to their
 		 * subclasses (due to inheritance).
 		 */
-		
+
 		AbstractShape circle = new Circle(Color.BLACK, 2.0);
 		AbstractShape rectangle_with_color = new Rectangle(Color.WHITE, 3.0, 4.0);
 
