@@ -39,17 +39,17 @@
  * 206 + 2% = 210.12  
  */
 
-package interface02.application;
+package application;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
-import interface02.model.entities.Contract;
-import interface02.model.entities.Installment;
-import interface02.model.services.ContractService;
-import interface02.model.services.PaypalService;
+import model.entities.Contract;
+import model.entities.Installment;
+import model.services.ContractService;
+import model.services.PaypalService;
 
 public class Program {
 	public static void main(String[] args) {

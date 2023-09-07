@@ -1,4 +1,4 @@
-package interface02.model.entities;
+package model.entities;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

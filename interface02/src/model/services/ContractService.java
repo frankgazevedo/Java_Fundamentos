@@ -1,9 +1,9 @@
-package interface02.model.services;
+package model.services;
 
 import java.time.LocalDate;
 
-import interface02.model.entities.Contract;
-import interface02.model.entities.Installment;
+import model.entities.Contract;
+import model.entities.Installment;
 
 public class ContractService {
 
