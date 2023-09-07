@@ -80,7 +80,7 @@ public class Program {
 		double pricePerDay = sc.nextDouble();
 
 		// Inversion of Control by Dependency Injection
-		// Up casting: BrazilTaxService is a subclass of TaxService
+		// Up casting: BrazilTaxService implements TaxService
 		RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 		rentalService.processInvoice(carRental);
 
