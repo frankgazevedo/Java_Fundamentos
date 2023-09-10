@@ -55,7 +55,7 @@ public class Program {
 	 * unbounded GENERICS: <T>
 	 * public static <T> void swap(List<T> list, int src, int des);
 	 * 
-	 * unbouded WILDCARD: <?>
+	 * unbounded WILDCARD: <?>
 	 * public static void swap(List<?> list, int src, int des);
 	 * 
 	 * Without upper or lower bounds, the wildcard represents “any type” (like JS), or a type of unknown. 
@@ -63,13 +63,13 @@ public class Program {
 	 * Moreover, wildcards are designed to support flexible subtyping.
 	 */
 	
-	// Her a wildcard type in use: List<?>
+	// list of unbounded wildcard type: List<?>
 	public static void printList(List<?> list) {
 
 		/*
-		 *  Cannot add elements to a collection of wildcard type
-		 *  Compilation error: the compiler does not know which the specific type 
-		 *  the list was instantiated from 
+		 * Cannot add elements to a collection of bounded wildcard type
+		 * Compilation error: the compiler does not know from which the specific type 
+		 * the list was instantiated
 		 */
 		// list.add(3);
 		
