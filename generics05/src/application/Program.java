@@ -30,6 +30,33 @@ public class Program {
 		// list.add(20); // Compilation error
 		
 		System.out.println("Number x = " + x);
+		
+		printList(intList);
+		printList(list);
 
+	}
+	
+	/*
+	 * IMPROPER SOLUTIONS: list of unbounded wildcard type: List<?>
+	 * It works, but it is not safe: we can receive a invalid type as argument.
+	 *  
+	public static void printList(List<?> list) {
+		for (Object object : list) {
+			System.out.print(object + " ");
+		}
+		System.out.println();
 	}	
+	 */
+	
+	/*
+	 * PROPER SOLUTION: list of bounded wildcard type: List<? extends Number>
+	 * This means that the List parameter can be the Number class OR any SUBclass of Number
+	 * <? extends T>): some type which is a SUBclass of T
+	 */
+	public static void printList(List<? extends Number> list) {
+		for (Object object : list) {
+			System.out.print(object + " ");
+		}
+		System.out.println();
+	}
 }
