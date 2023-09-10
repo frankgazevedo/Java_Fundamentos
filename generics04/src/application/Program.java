@@ -41,6 +41,7 @@ public class Program {
 	
 	/*
 	 * IMPROPER SOLUTIONS: list of unbounded wildcard type: List<?>
+	 * It works, but it is not safe: we can receive a invalid type as argument
 	 *  
 	public static double totalArea(List<?> list) {
 		double sum = 0.0;
